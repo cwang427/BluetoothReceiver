@@ -17,7 +17,6 @@
 		C3B8A0D81EAC3DC40051F3FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3B8A0D61EAC3DC40051F3FE /* LaunchScreen.storyboard */; };
 		C3B8A0E31EAC3DC40051F3FE /* BluetoothReceiverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B8A0E21EAC3DC40051F3FE /* BluetoothReceiverTests.swift */; };
 		C3B8A0EE1EAC3DEB0051F3FE /* StreamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B8A0ED1EAC3DEB0051F3FE /* StreamViewController.swift */; };
-		C3B8A0F11EAC54640051F3FE /* BTService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B8A0F01EAC54640051F3FE /* BTService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +45,6 @@
 		C3B8A0E21EAC3DC40051F3FE /* BluetoothReceiverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothReceiverTests.swift; sourceTree = "<group>"; };
 		C3B8A0E41EAC3DC40051F3FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C3B8A0ED1EAC3DEB0051F3FE /* StreamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamViewController.swift; sourceTree = "<group>"; };
-		C3B8A0F01EAC54640051F3FE /* BTService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTService.swift; sourceTree = "<group>"; };
 		CC5EAB69AE197CA54E41B29A /* Pods-BluetoothReceiverTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BluetoothReceiverTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BluetoothReceiverTests/Pods-BluetoothReceiverTests.release.xcconfig"; sourceTree = "<group>"; };
 		E70E63D48592DFFEAC21ECA2 /* Pods_BluetoothReceiver.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BluetoothReceiver.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED8C0CD9D205169925F887C6 /* Pods-BluetoothReceiverTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BluetoothReceiverTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BluetoothReceiverTests/Pods-BluetoothReceiverTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -127,7 +125,6 @@
 				C36443721EAE5FCD0030E541 /* Models */,
 				C3B8A0EF1EAC3DF00051F3FE /* View Controllers */,
 				C3B8A0CE1EAC3DC40051F3FE /* Main.storyboard */,
-				C3B8A0F01EAC54640051F3FE /* BTService.swift */,
 				C3B8A0D41EAC3DC40051F3FE /* Assets.xcassets */,
 				C3B8A0D61EAC3DC40051F3FE /* LaunchScreen.storyboard */,
 				C3B8A0D91EAC3DC40051F3FE /* Info.plist */,
@@ -358,7 +355,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3B8A0EE1EAC3DEB0051F3FE /* StreamViewController.swift in Sources */,
-				C3B8A0F11EAC54640051F3FE /* BTService.swift in Sources */,
 				C3B8A0D31EAC3DC40051F3FE /* BluetoothReceiver.xcdatamodeld in Sources */,
 				C3B8A0CB1EAC3DC40051F3FE /* AppDelegate.swift in Sources */,
 				C36443711EAE5FC40030E541 /* Device.swift in Sources */,
