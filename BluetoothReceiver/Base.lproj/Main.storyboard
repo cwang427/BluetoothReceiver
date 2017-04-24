@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Stream View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="StreamViewController" customModule="BluetoothReceiver" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,8 +20,83 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stream data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iPb-Jt-9ha">
+                                <rect key="frame" x="140.5" y="323" width="94" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rep count" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="06L-33-GwV">
+                                <rect key="frame" x="148.5" y="272" width="78" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Disconnected" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WID-iX-MzO">
+                                <rect key="frame" x="134.5" y="201" width="106" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Service" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yes-GD-xrw">
+                                <rect key="frame" x="159" y="394" width="57" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Characteristic" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PCH-dB-L8U">
+                                <rect key="frame" x="134" y="445" width="107" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vxi-hg-9GP">
+                                <rect key="frame" x="148" y="516" width="78" height="30"/>
+                                <state key="normal" title="Disconnect"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Device status:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YZl-43-h0a">
+                                <rect key="frame" x="133" y="172" width="109" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4jE-Yr-NuO">
+                                <rect key="frame" x="61" y="112" width="252" height="30"/>
+                                <state key="normal" title="Read characteristic data from device"/>
+                                <connections>
+                                    <action selector="readCharacteristic" destination="BYZ-38-t0r" eventType="touchUpInside" id="veH-4A-hKy"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="06L-33-GwV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1qj-23-TIg"/>
+                            <constraint firstItem="YZl-43-h0a" firstAttribute="top" secondItem="4jE-Yr-NuO" secondAttribute="bottom" constant="30" id="2mD-Sb-q9E"/>
+                            <constraint firstItem="iPb-Jt-9ha" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2xj-gf-4ZB"/>
+                            <constraint firstItem="iPb-Jt-9ha" firstAttribute="top" secondItem="06L-33-GwV" secondAttribute="bottom" constant="30" id="51M-iw-NgA"/>
+                            <constraint firstItem="PCH-dB-L8U" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="59j-8j-uaE"/>
+                            <constraint firstItem="Vxi-hg-9GP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5Sp-5d-W3b"/>
+                            <constraint firstItem="yes-GD-xrw" firstAttribute="top" secondItem="iPb-Jt-9ha" secondAttribute="bottom" constant="50" id="G6G-p0-NHf"/>
+                            <constraint firstItem="iPb-Jt-9ha" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="NKC-aJ-51b"/>
+                            <constraint firstItem="PCH-dB-L8U" firstAttribute="top" secondItem="yes-GD-xrw" secondAttribute="bottom" constant="30" id="Nh1-e9-9DK"/>
+                            <constraint firstItem="4jE-Yr-NuO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QhV-Kt-5UB"/>
+                            <constraint firstItem="WID-iX-MzO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qu5-7U-kka"/>
+                            <constraint firstItem="YZl-43-h0a" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Z6N-dp-omH"/>
+                            <constraint firstItem="06L-33-GwV" firstAttribute="top" secondItem="WID-iX-MzO" secondAttribute="bottom" constant="50" id="hs1-Tj-1oI"/>
+                            <constraint firstItem="yes-GD-xrw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="j6r-ne-dOx"/>
+                            <constraint firstItem="Vxi-hg-9GP" firstAttribute="top" secondItem="PCH-dB-L8U" secondAttribute="bottom" constant="50" id="uDR-8K-YiF"/>
+                            <constraint firstItem="WID-iX-MzO" firstAttribute="top" secondItem="YZl-43-h0a" secondAttribute="bottom" constant="8" id="uOI-gA-3XX"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="characteristicLabel" destination="PCH-dB-L8U" id="wY0-dm-Ylz"/>
+                        <outlet property="deviceConnectionStatusLabel" destination="WID-iX-MzO" id="pJc-Ut-DRr"/>
+                        <outlet property="disconnectButton" destination="Vxi-hg-9GP" id="qh5-Vq-EBS"/>
+                        <outlet property="readValueButton" destination="4jE-Yr-NuO" id="IRl-ch-0Jf"/>
+                        <outlet property="serviceLabel" destination="yes-GD-xrw" id="ayD-dD-N16"/>
+                        <outlet property="streamDataLabel" destination="iPb-Jt-9ha" id="qSS-EA-u3v"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

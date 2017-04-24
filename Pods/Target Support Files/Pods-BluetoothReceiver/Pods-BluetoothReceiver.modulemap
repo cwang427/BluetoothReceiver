@@ -1,0 +1,6 @@
+framework module Pods_BluetoothReceiver {
+  umbrella header "Pods-BluetoothReceiver-umbrella.h"
+
+  export *
+  module * { export * }
+}
